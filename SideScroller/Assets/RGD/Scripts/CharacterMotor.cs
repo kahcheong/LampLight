@@ -10,7 +10,7 @@ public class CharacterMotor : MonoBehaviour
 	public Vector3 currentSpeed;
 	[HideInInspector]
 	public float DistanceToTarget;
-
+    
 	private Rigidbody rigid;
 
 	void Awake()
