@@ -12,7 +12,7 @@ public class Vivi : MonoBehaviour
     private bool flying;
     private Vector3 RETURN;
     private Vector3 STOP;
-    private bool juiceLeft = true;
+    public float maxJuice;
 
 
     private float flybackTime = 1f;
@@ -30,8 +30,15 @@ public class Vivi : MonoBehaviour
     void Update()
     {   
         // checks if shift key is pressed, to start controlling vivi
-        flying = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && juiceLeft;
+        flying = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && juice > 0;
  
+        if (Input.GetKeyDown(KeyCode.O)){
+            maxJuice += 25;
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            maxJuice -= 25;
+        }
 
 
 
@@ -49,6 +56,7 @@ public class Vivi : MonoBehaviour
             var y = Input.GetAxis("Vertical") * Time.deltaTime * 4.5f;
 
             transform.Translate(x, y, 0);
+            juice -= 1.0f/3.0f;
         }
         else if (returned == false) //if vivi os far away, make her comeback and waits for her to return before allowing player to mvoe again
         {
@@ -60,6 +68,15 @@ public class Vivi : MonoBehaviour
         {
             PM.enabled = true;
             transform.position = player.transform.position + RETURN;
+            
+            if (juice < maxJuice)
+            {
+                juice += 1.0f;
+            }
+            if (juice > maxJuice)
+            {
+                juice -= 1.0f;
+            }
         }
     }
 
