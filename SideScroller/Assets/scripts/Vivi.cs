@@ -5,17 +5,18 @@ public class Vivi : MonoBehaviour
 {
 
     public GameObject player;
+    public float juice = 100f;
 
     private PlayerMove PM;
     private CharacterMotor CM;
     private bool flying;
     private Vector3 RETURN;
     private Vector3 STOP;
+    private bool juiceLeft = true;
 
 
     private float flybackTime = 1f;
     private bool returned;
-    private bool returning = false;
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class Vivi : MonoBehaviour
     void Update()
     {   
         // checks if shift key is pressed, to start controlling vivi
-        flying = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
+        flying = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && juiceLeft;
  
 
 
@@ -48,20 +49,14 @@ public class Vivi : MonoBehaviour
             var y = Input.GetAxis("Vertical") * Time.deltaTime * 4.5f;
 
             transform.Translate(x, y, 0);
-            returning = false;
         }
         else if (returned == false) //if vivi os far away, make her comeback and waits for her to return before allowing player to mvoe again
         {
-            
-            if (!returning)
-            {
-                flyback();
-                returning = true; ;
-            }
-           
+
+            flyback();
             StartCoroutine(flybackWait());
         }
-        else if (returned == true) //vivi tracked to player
+        else if (returned == true) //vivi tracked to player after returning
         {
             PM.enabled = true;
             transform.position = player.transform.position + RETURN;
@@ -86,8 +81,8 @@ public class Vivi : MonoBehaviour
         
         float distance = Vector3.Distance(gameObject.transform.position, player.transform.position + RETURN);
         Debug.Log(distance);
-        flybackTime = Mathf.Pow(distance, 1f / 3f) / 2.2f;
-        iTween.MoveTo(gameObject, player.transform.position + RETURN, flybackTime);
+        flybackTime = Mathf.Pow(distance, 1f / 3f) / 1.5f;
+        iTween.MoveUpdate(gameObject, player.transform.position + RETURN, flybackTime);
     }
 
 }
