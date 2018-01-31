@@ -97,7 +97,7 @@ public class Vivi : MonoBehaviour
     {
         
         float distance = Vector3.Distance(gameObject.transform.position, player.transform.position + RETURN);
-        Debug.Log(distance);
+        //Debug.Log(distance);
         flybackTime = Mathf.Pow(distance, 1f / 3f) / 1.5f;
         iTween.MoveUpdate(gameObject, player.transform.position + RETURN, flybackTime);
     }
