@@ -44,6 +44,7 @@ public class Hover : MonoBehaviour {
         xspeed = Random.Range(0.1f, 1.5f);
         yspeed = Random.Range(0.1f, 1.5f);
         zspeed = Random.Range(0.1f, 1.5f);
+        
         waiting = false;
     }
 
