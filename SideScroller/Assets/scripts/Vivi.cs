@@ -91,7 +91,7 @@ public class Vivi : MonoBehaviour
     }
 
     /*
-     * itweens vivi back to player with time as (distance^(1/3))/2
+     * itweens vivi back to player with time as (distance^(1/3))/ something tbd
      * /*/
     void flyback()
     {
