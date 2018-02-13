@@ -2,30 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BugPath : MonoBehaviour {
+public class BugPath : MonoBehaviour
+{
 
-    public float duration;
-    public string path;
+    public GameObject block;
+    public GameObject wayPoint_1;
+    public GameObject wayPoint_2;
+    public GameObject wayPoint_3;
+    public GameObject wayPoint_4;
+    public bool clockwise;
 
-    private bool _wait = true;
-	
-	// Update is called once per frame
-	void Update () {
-	    if (_wait)
-        {
-            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(path), "time", 5));
-            _wait = false;
-            StartCoroutine(waiting());
-        }	
+    private float width;
+    private float height;
 
-
-	}
-
-    IEnumerator waiting()
+    private void Start()
     {
-        yield return new WaitForSeconds(duration);
-        _wait = true;
-    }
+        Transform rt = block.transform;
 
+        width = block.transform.localScale.x + gameObject.transform.localScale.x / 2;
+        height = block.transform.localScale.y + gameObject.transform.localScale.y / 2;
+
+
+        if (clockwise)
+        {
+            wayPoint_1.transform.position = new Vector3(rt.position.x - width / 2, rt.position.y + height / 2, rt.position.z);
+            wayPoint_2.transform.position = new Vector3(rt.position.x + width / 2, rt.position.y + height / 2, rt.position.z);
+            wayPoint_3.transform.position = new Vector3(rt.position.x + width / 2, rt.position.y - height / 2, rt.position.z);
+            wayPoint_4.transform.position = new Vector3(rt.position.x - width / 2, rt.position.y - height / 2, rt.position.z);
+        }
+        else
+        {
+            wayPoint_1.transform.position = new Vector3(rt.position.x - width / 2, rt.position.y + height / 2, rt.position.z);
+            wayPoint_2.transform.position = new Vector3(rt.position.x - width / 2, rt.position.y - height / 2, rt.position.z);
+            wayPoint_3.transform.position = new Vector3(rt.position.x + width / 2, rt.position.y - height / 2, rt.position.z);
+            wayPoint_4.transform.position = new Vector3(rt.position.x + width / 2, rt.position.y + height / 2, rt.position.z);
+        }
+        gameObject.GetComponent<MoveToPoints>().enabled = true;
+
+    }
 
 }

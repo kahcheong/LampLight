@@ -10,6 +10,7 @@ public class MoveToPoints : MonoBehaviour
 	public float speed;										//how fast to move
 	public float delay;										//how long to wait at each waypoint
 	public type movementType;								//stop at final waypoint, loop through waypoints or move back n forth along waypoints
+    
 	
 	public enum type { PlayOnce, Loop, PingPong }
 	private int currentWp;
@@ -20,35 +21,40 @@ public class MoveToPoints : MonoBehaviour
 	private EnemyAI enemyAI;
 	private Rigidbody rigid;
 
-	//setup
-	void Awake()
+
+    //setup
+    void OnEnable()
 	{
-		if(transform.tag != "Enemy")
-		{
-			//add kinematic rigidbody
-			if(!GetComponent<Rigidbody>())
-				gameObject.AddComponent<Rigidbody>();
-			GetComponent<Rigidbody>().isKinematic = true;
-			GetComponent<Rigidbody>().useGravity = false;
-			GetComponent<Rigidbody>().interpolation = RigidbodyInterpolation.Interpolate;	
-		}
-		else
-		{
-			characterMotor = GetComponent<CharacterMotor>();
-			enemyAI = GetComponent<EnemyAI>();	
-		}
+        //if (bp.start)
+        {
 
-		rigid = GetComponent<Rigidbody>();
-		//get child waypoints, then detach them (so object can move without moving waypoints)
-		foreach (Transform child in transform)
-			if(child.tag == "Waypoint")
-				waypoints.Add (child);
+            if (transform.tag != "Enemy")
+            {
+                //add kinematic rigidbody
+                if (!GetComponent<Rigidbody>())
+                    gameObject.AddComponent<Rigidbody>();
+                GetComponent<Rigidbody>().isKinematic = true;
+                GetComponent<Rigidbody>().useGravity = false;
+                GetComponent<Rigidbody>().interpolation = RigidbodyInterpolation.Interpolate;
+            }
+            else
+            {
+                characterMotor = GetComponent<CharacterMotor>();
+                enemyAI = GetComponent<EnemyAI>();
+            }
 
-		foreach(Transform waypoint in waypoints)
-			waypoint.parent = null;
-		
-		if(waypoints.Count == 0)
-			Debug.LogError("No waypoints found for 'MoveToPoints' script. To add waypoints: add child gameObjects with the tag 'Waypoint'", transform);
+            rigid = GetComponent<Rigidbody>();
+            //get child waypoints, then detach them (so object can move without moving waypoints)
+            foreach (Transform child in transform)
+                if (child.tag == "Waypoint")
+                    waypoints.Add(child);
+
+            foreach (Transform waypoint in waypoints)
+                waypoint.parent = null;
+
+            if (waypoints.Count == 0)
+                Debug.LogError("No waypoints found for 'MoveToPoints' script. To add waypoints: add child gameObjects with the tag 'Waypoint'", transform);
+        }
 	}
 	
 	
