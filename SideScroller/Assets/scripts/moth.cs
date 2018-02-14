@@ -22,11 +22,11 @@ public class moth : MonoBehaviour
     {
         dist = Vector3.Distance(source.transform.position, gameObject.transform.position);
 
-        if (dist < 6f)
+        if (dist < 5f)
         {
             soul.moth = gameObject;
             source.GetComponent<ParticleSystem>().emissionRate = 100;
-            if (vivi.GetComponent<Vivi>().juice > 0) vivi.GetComponent<Vivi>().juice -= 4.0f / 3.0f; ;
+            if (vivi.GetComponent<Vivi>().juice > 0) vivi.GetComponent<Vivi>().juice -= 1.0f / 3.0f; ;
         }
         else
         { 
