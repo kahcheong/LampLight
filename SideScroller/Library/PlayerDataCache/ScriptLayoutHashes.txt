@@ -1,5 +1,6 @@
 WindowsStandalone
 9eb75629b0cdcebefcd9fd9795c48f7b Assembly-CSharp.dll:.BugPath
+dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cac917711d0e84d412d48737b6fc9ae7 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 706b890efe0a474d76b40e459ddb3e76 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -163,6 +164,6 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
 4429282b3a170bd080f43e24dc2e4042 Assembly-CSharp.dll:.TriggerParent
 b4bfc4cbe8808b28d7976bd6d8a05cf7 Assembly-CSharp.dll:.CharacterMotor
+7a7df9ac63ba57c4b5d853615f29d43b Assembly-CSharp.dll:.dieHole
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DemoTextFade
 142b582ab3582e10293c57e994c409c9 Assembly-CSharp.dll:.DoubleJumpEnabler
-dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker

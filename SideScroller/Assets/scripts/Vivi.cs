@@ -13,6 +13,7 @@ public class Vivi : MonoBehaviour
     private Vector3 RETURN;
     private Vector3 STOP;
     public float maxJuice;
+    public bool recharge = false;
 
 
     private float flybackTime = 1f;
@@ -40,6 +41,8 @@ public class Vivi : MonoBehaviour
             maxJuice -= 25;
         }
 
+
+        //recharge = Input.GetKey(KeyCode.I);
 
 
         if (flying  ) //free flying for vivi + disables player movement
@@ -69,7 +72,7 @@ public class Vivi : MonoBehaviour
             PM.enabled = true;
             transform.position = player.transform.position + RETURN;
             
-            if (juice < maxJuice)
+            if (juice < maxJuice && recharge)
             {
                 juice += 1.0f;
             }
