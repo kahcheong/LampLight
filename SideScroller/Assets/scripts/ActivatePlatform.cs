@@ -24,6 +24,7 @@ public class ActivatePlatform : MonoBehaviour
     {
         if (other.tag == "Vivi")
         {
+            Debug.Log("Vivi activated me");
             lightCone.active = true;
             colliderCone.active = true;
         }

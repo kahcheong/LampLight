@@ -14,11 +14,20 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            Debug.Log("Enter the cone");
+            other.GetComponent<BoxCollider>().enabled = true;
+        }
+    }
+
     public void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("We made it bois");
+            Debug.Log("Stay in the cone");
             other.GetComponent<BoxCollider>().enabled = true;
         }
     }
@@ -27,7 +36,7 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("BEGONE");
+            Debug.Log("Leave the cone");
             other.GetComponent<BoxCollider>().enabled = false;
         }
     }
