@@ -22,9 +22,9 @@ public class Hover : MonoBehaviour {
         x0 = transform.position.x;
         z0 = transform.position.z;
 
-        xspeed = Random.Range(0.1f, 1.5f);
-        yspeed = Random.Range(0.1f, 1.5f);
-        zspeed = Random.Range(0.1f, 1.5f);
+        //xspeed = Random.Range(0.1f, 1.5f);
+        //yspeed = Random.Range(0.1f, 1.5f);
+        //zspeed = Random.Range(0.1f, 1.5f);
     }
 	
 	// Update is called once per frame
