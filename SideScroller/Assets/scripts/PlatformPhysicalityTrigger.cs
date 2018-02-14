@@ -4,16 +4,30 @@ using UnityEngine;
 
 public class PlatformPhysicalityTrigger : MonoBehaviour
 {
-    private GameObject[] obstacleArray;
-
-    void Start()
+    public GameObject[] obstacles;
+    public void OnEnable()
     {
-        obstacleArray = GetComponentInParent<ActivatePlatform>().obstacle;
+        Debug.Log("We inside the cone");
+        for (int i = 0; i < obstacles.Length; i++)
+        {
+            obstacles[i].GetComponent<BoxCollider>().enabled = true;
+        }
     }
-    private void OnTriggerExit(Collider other)
+
+    public void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Obstacle"))
         {
+            Debug.Log("We made it bois");
+            other.GetComponent<BoxCollider>().enabled = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            Debug.Log("BEGONE");
             other.GetComponent<BoxCollider>().enabled = false;
         }
     }
