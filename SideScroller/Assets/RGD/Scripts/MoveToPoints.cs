@@ -21,12 +21,19 @@ public class MoveToPoints : MonoBehaviour
 	private EnemyAI enemyAI;
 	private Rigidbody rigid;
 
+    public bool waitForPlayer = false;
+    public bool isPlatform;
+    private GameObject player;
+    public bool istouching;
+    public float leeway = 3f;
+
 
     //setup
     void OnEnable()
 	{
         //if (bp.start)
         {
+            player = GameObject.Find("Player");
 
             if (transform.tag != "Enemy")
             {
@@ -100,18 +107,40 @@ public class MoveToPoints : MonoBehaviour
 	//if this is a platform move platforms toward waypoint
 	void FixedUpdate()
 	{
-		if(transform.tag != "Enemy")
+
+
+        if (transform.tag != "Enemy")
 		{
-			if(!arrived && waypoints.Count > 0)
+            if (waitForPlayer && leeway < 0)
+            {
+                Vector3 direction = waypoints[0].position - transform.position;
+                rigid.MovePosition(transform.position + (direction.normalized * speed * Time.fixedDeltaTime));
+            }
+			else if(!arrived && waypoints.Count > 0)
 			{
 				Vector3 direction = waypoints[currentWp].position - transform.position;
 				rigid.MovePosition(transform.position + (direction.normalized * speed * Time.fixedDeltaTime));
 			}
 		}
+        if (isPlatform)
+        {
+            if (leeway >= 0f) leeway -= Time.deltaTime;
+            waitForPlayer = true;
+        }
 	}
-	
-	//get the next waypoint
-	private void GetNextWP()
+
+    private void OnCollisionStay(Collision col)
+    {   
+
+        if (col.gameObject.name == "Player" && col.gameObject.transform.position.y > gameObject.transform.position.y && isPlatform)
+        {
+            waitForPlayer = false;
+            leeway = 0.5f;
+        }
+    }
+
+    //get the next waypoint
+    private void GetNextWP()
 	{
 		if(movementType == type.PlayOnce)
 		{
