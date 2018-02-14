@@ -12,9 +12,10 @@ public class Hazard : MonoBehaviour
 	public bool triggerEnter;								//are we checking for a trigger collision? (ie: hits a child trigger symbolising area of effect)
 	public bool collisionEnter = true;						//are we checking for collider collision? (ie: hits the actual collider of the object)
 	public string[] effectedTags = {"Player"};				//which objects are vulnerable to this hazard (tags)
-	public AudioClip hitSound;								//sound to play when an object is hurt by this hazard
-	
-	private DealDamage dealDamage;
+	public AudioClip hitSound;                              //sound to play when an object is hurt by this hazard
+    public GameObject vivi;
+
+    private DealDamage dealDamage;
 	private AudioSource aSource;
 
 	//setup
@@ -34,6 +35,7 @@ public class Hazard : MonoBehaviour
 			if(col.transform.tag == tag)
 			{
 				dealDamage.Attack (col.gameObject, damage, pushHeight, pushForce);
+                vivi.GetComponent<Vivi>().juice -= 25;
 				if (hitSound)
 				{
 					aSource.clip = hitSound;
