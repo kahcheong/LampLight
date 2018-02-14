@@ -26,7 +26,7 @@ public class moth : MonoBehaviour
         {
             soul.moth = gameObject;
             source.GetComponent<ParticleSystem>().emissionRate = 100;
-            if (vivi.GetComponent<Vivi>().juice > 0) vivi.GetComponent<Vivi>().juice -= 4.0f / 3.0f; ;
+            if (vivi.GetComponent<Vivi>().juice > 0) vivi.GetComponent<Vivi>().juice -= 1.0f / 3.0f; ;
         }
         else
         { 
