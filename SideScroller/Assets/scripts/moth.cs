@@ -22,7 +22,7 @@ public class moth : MonoBehaviour
     {
         dist = Vector3.Distance(source.transform.position, gameObject.transform.position);
 
-        if (dist < 6f)
+        if (dist < 5f)
         {
             soul.moth = gameObject;
             source.GetComponent<ParticleSystem>().emissionRate = 100;
