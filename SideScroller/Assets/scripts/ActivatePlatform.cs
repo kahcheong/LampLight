@@ -17,6 +17,7 @@ public class ActivatePlatform : MonoBehaviour
             }
         }
 
+        lightCone.active = false;
         colliderCone.active = false;
     }
 
