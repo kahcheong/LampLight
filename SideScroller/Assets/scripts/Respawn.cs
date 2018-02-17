@@ -18,7 +18,7 @@ public class Respawn : MonoBehaviour
     void Update ()
     {
 
-        if (checker.juice <= 1)
+        if (checker.juice <= 0.2f)
         {
             gameObject.transform.position = respawnZone.transform.position;
             checker.juice = checker.maxJuice;
