@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class Vivi : MonoBehaviour
@@ -13,7 +14,8 @@ public class Vivi : MonoBehaviour
     private Vector3 RETURN;
     private Vector3 STOP;
     public float maxJuice;
-    public bool recharge = false;
+    public bool[] recharge;
+    public int recharge_size = 0;
 
 
     private float flybackTime = 1f;
@@ -72,7 +74,7 @@ public class Vivi : MonoBehaviour
             PM.enabled = true;
             transform.position = player.transform.position + RETURN;
             
-            if (juice < maxJuice && recharge)
+            if (juice < maxJuice &&  recharge.Contains(true))
             {
                 juice += 1.0f;
             }
