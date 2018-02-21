@@ -14,6 +14,13 @@ public class succ : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (moth == null)
+        {
+            moth = gameObject;
+        }
+
         gameObject.transform.LookAt(moth.transform.position);
+
+        
 	}
 }
