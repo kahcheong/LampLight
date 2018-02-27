@@ -19,6 +19,12 @@ public class ActivatePlatform : MonoBehaviour
 
         lightCone.active = false;
         colliderCone.active = false;
+        for (int i = 0; i < colliderCone.GetComponentInChildren<PlatformPhysicalityTrigger>().obstacles.Length; i++)
+        {
+            colliderCone.GetComponentInChildren<PlatformPhysicalityTrigger>().obstacles[i].GetComponentInChildren<PullPlatform>().activated = false;
+            Debug.Log("Hello, I'm on index: " + i);
+        }
+
     }
 
     void OnTriggerEnter(Collider other)
