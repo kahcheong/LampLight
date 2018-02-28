@@ -10,26 +10,36 @@ ModelImporter:
     100004: //RootNode
     100006: Left_PinkCrystal
     100008: Right_PinkCrystal
+    100010: Pink_Crystal_Base
+    100012: Pink_Crystal_Normal 1
     400000: Back_Small_PinkCrystal
     400002: Front_Small_PinkCrystal
     400004: //RootNode
     400006: Left_PinkCrystal
     400008: Right_PinkCrystal
+    400010: Pink_Crystal_Base
+    400012: Pink_Crystal_Normal 1
     2300000: Back_Small_PinkCrystal
     2300002: Front_Small_PinkCrystal
     2300004: //RootNode
     2300006: Left_PinkCrystal
     2300008: Right_PinkCrystal
+    2300010: Pink_Crystal_Base
+    2300012: Pink_Crystal_Normal 1
     3300000: Back_Small_PinkCrystal
     3300002: Front_Small_PinkCrystal
     3300004: //RootNode
     3300006: Left_PinkCrystal
     3300008: Right_PinkCrystal
+    3300010: Pink_Crystal_Base
+    3300012: Pink_Crystal_Normal 1
     4300000: Middle_LargePinkCrystal
     4300002: Front_Small_PinkCrystal
     4300004: Back_Small_PinkCrystal
     4300006: Right_PinkCrystal
     4300008: Left_PinkCrystal
+    4300010: Pink_Crystal_Normal
+    4300012: Pink_Crystal_Base
     9500000: //RootNode
   materials:
     importMaterials: 1
