@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 11a34fbde31505d4a9d4129a904b79e0
-timeCreated: 1518366572
+guid: faecfaf9ce048844fb898a52bfdd4f43
+timeCreated: 1519520493
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -16,6 +16,7 @@ ModelImporter:
     100016: Crystal019
     100018: Crystal020
     100020: //RootNode
+    100022: LampLight_Crystal_Base003
     400000: Crystal003
     400002: Crystal012
     400004: Crystal013
@@ -27,6 +28,7 @@ ModelImporter:
     400016: Crystal019
     400018: Crystal020
     400020: //RootNode
+    400022: LampLight_Crystal_Base003
     2300000: Crystal003
     2300002: Crystal012
     2300004: Crystal013
@@ -38,6 +40,7 @@ ModelImporter:
     2300016: Crystal019
     2300018: Crystal020
     2300020: //RootNode
+    2300022: LampLight_Crystal_Base003
     3300000: Crystal003
     3300002: Crystal012
     3300004: Crystal013
@@ -49,7 +52,8 @@ ModelImporter:
     3300016: Crystal019
     3300018: Crystal020
     3300020: //RootNode
-    4300000: Main_BlueCrystal
+    3300022: LampLight_Crystal_Base003
+    4300000: LampLight_Blue_Normal
     4300002: Crystal020
     4300004: Crystal019
     4300006: Crystal018
@@ -60,6 +64,7 @@ ModelImporter:
     4300016: Crystal013
     4300018: Crystal012
     4300020: Crystal003
+    4300022: LampLight_Crystal_Base003
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: cfce4293eae64f74da6de3c34273dbf5
-timeCreated: 1518366572
+guid: 2803cdc4379a18c43b814fe14d0308fa
+timeCreated: 1519520489
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -15,6 +15,7 @@ ModelImporter:
     100014: Green_Crystal020
     100016: Green_Crystal021
     100018: //RootNode
+    100020: LampLight_Crystal_Base
     400000: Green_Crystal001
     400002: Green_Crystal002
     400004: Green_Crystal003
@@ -25,6 +26,7 @@ ModelImporter:
     400014: Green_Crystal020
     400016: Green_Crystal021
     400018: //RootNode
+    400020: LampLight_Crystal_Base
     2300000: Green_Crystal001
     2300002: Green_Crystal002
     2300004: Green_Crystal003
@@ -35,6 +37,7 @@ ModelImporter:
     2300014: Green_Crystal020
     2300016: Green_Crystal021
     2300018: //RootNode
+    2300020: LampLight_Crystal_Base
     3300000: Green_Crystal001
     3300002: Green_Crystal002
     3300004: Green_Crystal003
@@ -45,6 +48,7 @@ ModelImporter:
     3300014: Green_Crystal020
     3300016: Green_Crystal021
     3300018: //RootNode
+    3300020: LampLight_Crystal_Base
     4300000: Green_Crystal
     4300002: Green_Crystal009
     4300004: Green_Crystal008
@@ -55,6 +59,7 @@ ModelImporter:
     4300014: Green_Crystal001
     4300016: Green_Crystal020
     4300018: Green_Crystal021
+    4300020: LampLight_Crystal_Base
     9500000: //RootNode
   materials:
     importMaterials: 1
