@@ -32,6 +32,7 @@ public class ActivatePlatform : MonoBehaviour
         p3.emissionRate = 0;
 
         light.range = 4;                                                //preps the light to be at the correct interval to match the base's pulsation
+        LightCone.transform.localPosition += new Vector3(0, 13, 0);     // preps the revealer shader to be at~the same position as the light
 
         for (int i = 0; i < obstacle.Length; i++)
         {
