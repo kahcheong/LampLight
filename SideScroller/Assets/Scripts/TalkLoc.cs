@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class TalkLoc : MonoBehaviour {
 
-    public string identifier;
+    public string message;
     
     public GameObject player;
     public Talk talker;
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         player = GameObject.Find("Player");
         talker = player.GetComponent<Talk>();
 
@@ -19,7 +20,7 @@ public class TalkLoc : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        talker.talk(identifier, gameObject);
+        talker.talk(message, gameObject);
         talker.talking = true;
     }
 

@@ -9,8 +9,6 @@ public class Talk : MonoBehaviour {
     public GameObject player;
     public GameObject used;
 
-    public string[] message;
-    public string[] identifier;
     public Canvas _canvas;
     public Text _text;
 
@@ -34,16 +32,13 @@ public class Talk : MonoBehaviour {
         }
     }
 
-    public void talk(string idn, GameObject g)
+    public void talk(string message, GameObject g)
     {
         talking = true;
         used = g;
         int temp = 0;
 
-        for (int i = 0; i < identifier.Length; i++)
-        {
-            if (idn.Equals(identifier)) temp = i;
-        }
-        _text.text = message[temp];
+
+        _text.text = message;
     }
 }
