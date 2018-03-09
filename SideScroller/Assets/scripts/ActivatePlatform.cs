@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -53,6 +54,12 @@ public class ActivatePlatform : MonoBehaviour
             on = true;
             colliderCone.active = true;
             LightCone.active = true;
+            try
+            {
+                ActivatePullableObstacles();
+            }
+            catch (Exception e)
+            {}
         }
     }
 
@@ -90,7 +97,15 @@ public class ActivatePlatform : MonoBehaviour
                 if (light.range < 4) fade = false;
             }
 
+            
+        }
+    }
 
+    private void ActivatePullableObstacles()
+    {
+        for (int i = 0; i <= obstacle.Length; i++)
+        {
+            obstacle[i].GetComponentInChildren<PullPlatform>().activated = true;
         }
     }
 

@@ -13,7 +13,7 @@ public class PullPlatform : MonoBehaviour
 	{
 		if(activated)
 		{
-			this.transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, speed);
+			transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, speed);
 		}
 	}
 }

@@ -20,7 +20,6 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
         {
             Debug.Log("Enter the cone");
             other.GetComponent<BoxCollider>().enabled = true;
-            other.GetComponentInChildren<PullPlatform>().activated = true;
         }
     }
 
@@ -30,7 +29,6 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
         {
             Debug.Log("Stay in the cone");
             other.GetComponent<BoxCollider>().enabled = true;
-            other.GetComponentInChildren<PullPlatform>().activated = true;
         }
     }
 
@@ -40,7 +38,6 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
         {
             Debug.Log("Leave the cone");
             other.GetComponent<BoxCollider>().enabled = false;
-            other.GetComponentInChildren<PullPlatform>().activated = false;
         }
     }
 }

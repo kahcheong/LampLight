@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Dilly\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_SideScroller.582447038.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Dilly\Documents\GitHub\LampLight\SideScroller" t="IncludeRecursive">
+    <e p="C:\Users\dd16tr\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_SideScroller.-1344377597.00" t="ExcludeRecursive" />
+    <e p="C:\Users\dd16tr\Documents\GitHub\LampLight\SideScroller" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="magic portal" t="Include">
-          <e p="StencilShaders" t="Include">
-            <e p="Masks" t="Include">
-              <e p="DepthMask.shader" t="Include" />
-              <e p="StencilMask_1.shader" t="Include" />
-              <e p="StencilMask_2.shader" t="Include" />
-              <e p="StencilMask_3.shader" t="Include" />
-              <e p="StencilMask_4.shader" t="Include" />
-            </e>
-            <e p="Portal_1_Shaders" t="Include">
-              <e p="standard.shader" t="Include" />
-              <e p="Stencil_01_Alpha-Diffuse.shader" t="Include" />
-              <e p="Stencil_01_Normal-Diffuse.shader" t="Include" />
-              <e p="Stencil_01_Normal-Spec.shader" t="Include" />
-            </e>
-            <e p="Portal_2_Shaders" t="Include">
-              <e p="Stencil_02_Alpha-Diffuse.shader" t="Include" />
-              <e p="Stencil_02_Normal-Diffuse.shader" t="Include" />
-              <e p="Stencil_02_Normal-Spec.shader" t="Include" />
-              <e p="Stencil_02_Reflect-Normal-Spec.shader" t="Include" />
-            </e>
-            <e p="Portal_3_Shaders" t="Include">
-              <e p="Stencil_03_Alpha-Diffuse.shader" t="Include" />
-              <e p="Stencil_03_Normal-Diffuse.shader" t="Include" />
-              <e p="Stencil_03_Normal-Spec.shader" t="Include" />
-              <e p="Stencil_03_Reflect-Normal-Spec.shader" t="Include" />
-            </e>
-            <e p="Portal_4_Shaders" t="Include">
-              <e p="Stencil_04_Alpha-Diffuse.shader" t="Include" />
-              <e p="Stencil_04_Normal-Diffuse.shader" t="Include" />
-              <e p="Stencil_04_Normal-Spec.shader" t="Include" />
-            </e>
-            <e p="StencilViewer" t="Include">
-              <e p="Stencil_ViewRef_01.shader" t="Include" />
-              <e p="Stencil_ViewRef_02.shader" t="Include" />
-              <e p="Stencil_ViewRef_03.shader" t="Include" />
-              <e p="Stencil_ViewRef_04.shader" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
               <e p="Unity3DRider.cs" t="Include" />
+            </e>
+          </e>
+          <e p="magic portal" t="Include">
+            <e p="StencilShaders" t="Include">
+              <e p="Masks" t="Include">
+                <e p="DepthMask.shader" t="Include" />
+                <e p="StencilMask_1.shader" t="Include" />
+                <e p="StencilMask_2.shader" t="Include" />
+                <e p="StencilMask_3.shader" t="Include" />
+                <e p="StencilMask_4.shader" t="Include" />
+              </e>
+              <e p="Portal_1_Shaders" t="Include">
+                <e p="standard.shader" t="Include" />
+                <e p="Stencil_01_Alpha-Diffuse.shader" t="Include" />
+                <e p="Stencil_01_Normal-Diffuse.shader" t="Include" />
+                <e p="Stencil_01_Normal-Spec.shader" t="Include" />
+              </e>
+              <e p="Portal_2_Shaders" t="Include">
+                <e p="Stencil_02_Alpha-Diffuse.shader" t="Include" />
+                <e p="Stencil_02_Normal-Diffuse.shader" t="Include" />
+                <e p="Stencil_02_Normal-Spec.shader" t="Include" />
+                <e p="Stencil_02_Reflect-Normal-Spec.shader" t="Include" />
+              </e>
+              <e p="Portal_3_Shaders" t="Include">
+                <e p="Stencil_03_Alpha-Diffuse.shader" t="Include" />
+                <e p="Stencil_03_Normal-Diffuse.shader" t="Include" />
+                <e p="Stencil_03_Normal-Spec.shader" t="Include" />
+                <e p="Stencil_03_Reflect-Normal-Spec.shader" t="Include" />
+              </e>
+              <e p="Portal_4_Shaders" t="Include">
+                <e p="Stencil_04_Alpha-Diffuse.shader" t="Include" />
+                <e p="Stencil_04_Normal-Diffuse.shader" t="Include" />
+                <e p="Stencil_04_Normal-Spec.shader" t="Include" />
+              </e>
+              <e p="StencilViewer" t="Include">
+                <e p="Stencil_ViewRef_01.shader" t="Include" />
+                <e p="Stencil_ViewRef_02.shader" t="Include" />
+                <e p="Stencil_ViewRef_03.shader" t="Include" />
+                <e p="Stencil_ViewRef_04.shader" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Pixelplacement" t="Include">
@@ -236,46 +236,80 @@
             </e>
           </e>
         </e>
-        <e p="RGD" t="Include">
-          <e p="Misc" t="Include">
-            <e p="DemoTextFade.cs" t="Include" />
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="Camera2DFollow.cs" t="Include" />
-            <e p="CameraFollow.cs" t="Include" />
-            <e p="CharacterMotor.cs" t="Include" />
-            <e p="Checkpoint.cs" t="Include" />
-            <e p="Coin.cs" t="Include" />
-            <e p="DealDamage.cs" t="Include" />
-            <e p="DestroyObject.cs" t="Include" />
-            <e p="DoubleJumpEnabler.cs" t="Include" />
-            <e p="EnemyAI.cs" t="Include" />
-            <e p="Goal.cs" t="Include" />
-            <e p="GUIManager.cs" t="Include" />
-            <e p="Hazard.cs" t="Include" />
-            <e p="Health.cs" t="Include" />
-            <e p="MoveToPoints.cs" t="Include" />
-            <e p="PlayerMove.cs" t="Include" />
-            <e p="Throwing.cs" t="Include" />
-            <e p="TriggerParent.cs" t="Include" />
-            <e p="Water.cs" t="Include" />
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="ActivatePlatform.cs" t="Include" />
           <e p="BugPath.cs" t="Include" />
           <e p="characterCameraFollow.cs" t="Include" />
           <e p="dieHole.cs" t="Include" />
           <e p="displayUI.cs" t="Include" />
+          <e p="GlowFruitPickup.cs" t="Include" />
           <e p="Hover.cs" t="Include" />
           <e p="juiceLevel.cs" t="Include" />
           <e p="MagniGlass.cs" t="Include" />
           <e p="moth.cs" t="Include" />
+          <e p="PlatFormPhysicality_PushPull.cs" t="Include" />
           <e p="PlatformPhysicalityTrigger.cs" t="Include" />
+          <e p="PullPlatform.cs" t="Include" />
           <e p="Respawn.cs" t="Include" />
           <e p="RespawnZone.cs" t="Include" />
+          <e p="RGD" t="Include">
+            <e p="Misc" t="Include">
+              <e p="DemoTextFade.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Camera2DFollow.cs" t="Include" />
+              <e p="CameraFollow.cs" t="Include" />
+              <e p="CharacterMotor.cs" t="Include" />
+              <e p="Checkpoint.cs" t="Include" />
+              <e p="Coin.cs" t="Include" />
+              <e p="DealDamage.cs" t="Include" />
+              <e p="DestroyObject.cs" t="Include" />
+              <e p="DoubleJumpEnabler.cs" t="Include" />
+              <e p="EnemyAI.cs" t="Include" />
+              <e p="Goal.cs" t="Include" />
+              <e p="GUIManager.cs" t="Include" />
+              <e p="Hazard.cs" t="Include" />
+              <e p="Health.cs" t="Include" />
+              <e p="MoveToPoints.cs" t="Include" />
+              <e p="PlayerMove.cs" t="Include" />
+              <e p="Throwing.cs" t="Include" />
+              <e p="TriggerParent.cs" t="Include" />
+              <e p="Water.cs" t="Include" />
+            </e>
+          </e>
           <e p="succ.cs" t="Include" />
+          <e p="Talk.cs" t="Include" />
+          <e p="TalkLoc.cs" t="Include" />
           <e p="Vivi.cs" t="Include" />
+        </e>
+        <e p="Standard Assets" t="Include">
+          <e p="Effects" t="Include">
+            <e p="ImageEffects" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="PostEffectsBase.cs" t="Include" />
+                <e p="Tonemapping.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="Tonemapper.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Volumetric Lights" t="Include">
+          <e p="Editor" t="Include">
+            <e p="ImageEffects" t="Include">
+              <e p="TonemappingEditor.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="VolumetricLight.cs" t="Include" />
+            <e p="VolumetricLightRenderer.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="BilateralBlur.shader" t="Include" />
+            <e p="BlitAdd.shader" t="Include" />
+            <e p="VolumetricLight.shader" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
