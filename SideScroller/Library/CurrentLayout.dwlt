@@ -91,7 +91,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 222}
   m_MaxSize: {x: 4000, y: 4022}
   vertical: 0
-  controlID: 48
+  controlID: 9
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 9
+  controlID: 66
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,8 +134,8 @@ MonoBehaviour:
     y: 0
     width: 389
     height: 947
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 67
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 11
+  controlID: 68
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -322,8 +322,8 @@ MonoBehaviour:
     y: 0
     width: 1152
     height: 573
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -367,19 +367,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Plugins/Crystals
+    - Assets/ArtSound/Models
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Plugins/Crystals
+  - Assets/ArtSound/Models
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\dd16tr\Documents\GitHub\LampLight\SideScroller
+  m_LastProjectPath: C:\Users\ah15tp\Documents\GitHub\LampLight\SideScroller
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9a290000
-    m_LastClickedID: 10650
-    m_ExpandedIDs: 0000000072270000422800009829000000ca9a3bffffff7f
+    m_SelectedIDs: 54350000
+    m_LastClickedID: 13652
+    m_ExpandedIDs: 00000000f62e0000c22f0000143100005435000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -407,7 +407,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000072270000
+    m_ExpandedIDs: 00000000f62e0000c22f000014310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -523,28 +523,28 @@ MonoBehaviour:
     height: 552
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 20360000
     m_LastClickedID: 0
-    m_ExpandedIDs: 36f7f9ff5af7f9ff60f7f9ff76f7f9ff3a7afbff9051fcffc038fdfff438fdfff838fdff1a39fdffd2cafdff0acbfdff2ccbfdff2ecbfdff9e5bfefffa5bfeff4ee3feff68e3feff6ae3feffa031ffffa231ffffe678ffff92f2ffff1afcffff0000000028340000
+    m_ExpandedIDs: 92a1feff9aa1feff18d5feff22f2ffffb6ffffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Left_PinkCrystal
-      m_OriginalName: Left_PinkCrystal
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -182098
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 7}
     m_SearchString: 
   m_ExpandedScenes:
-  - TestScene
+  - TestSceneLevel
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -580,9 +580,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.1034617, y: -0.922448, z: 5.2024302}
+    m_Target: {x: 39.845795, y: 15.377193, z: -25.355896}
     speed: 2
-    m_Value: {x: 3.1034617, y: -0.922448, z: 5.2024302}
+    m_Value: {x: 39.845795, y: 15.377193, z: -25.355896}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -605,13 +605,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.14356507, y: -0.1522535, z: 0.022358065, w: -0.9776032}
+    m_Target: {x: -0.00031177484, y: -0.028496848, z: 0.000006956646, w: -0.999598}
     speed: 2
-    m_Value: {x: -0.14356509, y: -0.15225351, z: 0.022358067, w: -0.97760326}
+    m_Value: {x: -0.00031177353, y: -0.02849673, z: 0.0000069566167, w: -0.99959385}
   m_Size:
-    m_Target: 19.430191
+    m_Target: 260.97632
     speed: 2
-    m_Value: 19.430191
+    m_Value: 260.97632
   m_Ortho:
     m_Target: 0
     speed: 2
