@@ -20,6 +20,7 @@ public class ActivateTempCrackedPlatform : MonoBehaviour
     private ParticleSystem p1;                                          //1st particle system controller
     private ParticleSystem p2;                                          //2nd particle system controller
     private ParticleSystem p3;                                          //3rd particle system controller
+    public GameObject home;                                             //Starting position of the obstacle
     
     [Tooltip("The time to keep the platform activated")]
     public float activationTime;                                        //Activation time for the platform
@@ -110,6 +111,16 @@ public class ActivateTempCrackedPlatform : MonoBehaviour
                 }
                 colliderCone.active = false;
                 LightCone.active = false;
+            }
+            if(activeTime == 0)
+            {
+                for (int i = 0; i < obstacle.Length; i++)
+                {
+                    if (obstacle[i] != null)
+                    {
+                        obstacle[i].transform.position = home.transform.position;
+                    }
+                }
             }
         }
         else
