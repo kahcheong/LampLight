@@ -27,7 +27,7 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("Stay in the cone");
+            Debug.Log("Stay in the cone" + other.gameObject.name);
             other.GetComponent<BoxCollider>().enabled = true;
         }
     }
