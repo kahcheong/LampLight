@@ -119,6 +119,7 @@ public class ActivateTempCrackedPlatform : MonoBehaviour
                     if (obstacle[i] != null)
                     {
                         obstacle[i].transform.position = home.transform.position;
+                        obstacle[i].GetComponentInParent<PullPlatform>().enabled = false;
                     }
                 }
             }
@@ -145,6 +146,7 @@ public class ActivateTempCrackedPlatform : MonoBehaviour
         for (int i = 0; i <= obstacle.Length; i++)
         {
             obstacle[i].GetComponentInChildren<PullPlatform>().activated = true;
+            obstacle[i].GetComponentInParent<PullPlatform>().enabled = true;
         }
     }
     
