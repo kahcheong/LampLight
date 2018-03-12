@@ -9,11 +9,20 @@ public class PullPlatform : MonoBehaviour
 	public GameObject target; //The point the platform will move to
     [Range(0,1)]
     public float speed; //Speed to target
+
+	public Boolean returning = false;	//Whether or not the platform is going home
+	public GameObject home;	//Home location of the platform
+	
 	void Update()
 	{
 		if(activated)
 		{
 			transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, speed);
+		}
+		if(returning)
+		{
+			activated = false;
+			transform.position = Vector3.MoveTowards(this.transform.position, home.transform.position, speed);
 		}
 	}
 }
