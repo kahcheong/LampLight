@@ -24,7 +24,8 @@ public class ActivateTempCrackedPlatform : MonoBehaviour
     [Tooltip("The time to keep the platform activated")]
     public float activationTime;                                        //Activation time for the platform
 
-    public float activeTime;                                            //The time the crystal has been active
+    [SerializeField]
+    private float activeTime;                                            //The time the crystal has been active
 
     private void Start()
     {
@@ -88,7 +89,7 @@ public class ActivateTempCrackedPlatform : MonoBehaviour
                 p2.emissionRate += Time.deltaTime * expandSpeed;
                 p3.emissionRate += Time.deltaTime * expandSpeed;
             }
-            activationTime += Time.deltaTime;
+            activeTime += Time.deltaTime;
             if (activeTime >= activationTime)                            //Handles when the timer is up for the crystal
             {
                 activeTime = 0;
