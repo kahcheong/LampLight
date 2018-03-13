@@ -246,6 +246,7 @@
           <e p="GlowFruitPickup.cs" t="Include" />
           <e p="Hover.cs" t="Include" />
           <e p="juiceLevel.cs" t="Include" />
+          <e p="JuiceWobble.cs" t="Include" />
           <e p="MagniGlass.cs" t="Include" />
           <e p="moth.cs" t="Include" />
           <e p="PlatFormPhysicality_PushPull.cs" t="Include" />
@@ -281,6 +282,7 @@
           <e p="succ.cs" t="Include" />
           <e p="Talk.cs" t="Include" />
           <e p="TalkLoc.cs" t="Include" />
+          <e p="Tutorial.cs" t="Include" />
           <e p="Vivi.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
