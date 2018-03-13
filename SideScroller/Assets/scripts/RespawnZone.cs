@@ -11,6 +11,7 @@ public class RespawnZone : MonoBehaviour {
     public GameObject juiceSource;
     private int my_ID;
     private bool succ;
+    public GameObject lightCone;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +31,7 @@ public class RespawnZone : MonoBehaviour {
         if (dist < 5f)
         {
             juiceSource.SetActive(true);
+            lightCone.SetActive(true);
             player.GetComponent<Respawn>().respawnZone = gameObject;
             succ = true;
         }
