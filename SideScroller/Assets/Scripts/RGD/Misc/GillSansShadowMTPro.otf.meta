@@ -1,16 +1,19 @@
 fileFormatVersion: 2
 guid: 110e6f96420c23448a15818efe0ea51c
 TrueTypeFontImporter:
-  serializedVersion: 2
-  fontSize: 16
+  serializedVersion: 4
+  fontSize: 48
   forceTextureCase: -2
-  characterSpacing: 1
-  characterPadding: 0
+  characterSpacing: 0
+  characterPadding: 1
   includeFontData: 1
-  use2xBehaviour: 0
-  fontNames: []
+  fontName: Gill Sans Shadow MT Pro
+  fontNames:
+  - Gill Sans Shadow MT Pro
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
+  ascentCalculationMode: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
