@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: b5233b2f20bb85548974d64ec73f6b35
+timeCreated: 1520887222
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Maggot_Back
+    100004: Maggot_Belly
+    100006: Maggot_Left_Eye
+    100008: Maggot_leg1
+    100010: Maggot_Leg2
+    100012: Maggot_leg3
+    100014: Maggot_Leg4
+    100016: Maggot_Leg5
+    100018: Maggot_leg6
+    100020: Maggot_Right_Eye
+    400000: //RootNode
+    400002: Maggot_Back
+    400004: Maggot_Belly
+    400006: Maggot_Left_Eye
+    400008: Maggot_leg1
+    400010: Maggot_Leg2
+    400012: Maggot_leg3
+    400014: Maggot_Leg4
+    400016: Maggot_Leg5
+    400018: Maggot_leg6
+    400020: Maggot_Right_Eye
+    2300000: //RootNode
+    2300002: Maggot_Back
+    2300004: Maggot_Belly
+    2300006: Maggot_Left_Eye
+    2300008: Maggot_leg1
+    2300010: Maggot_Leg2
+    2300012: Maggot_leg3
+    2300014: Maggot_Leg4
+    2300016: Maggot_Leg5
+    2300018: Maggot_leg6
+    2300020: Maggot_Right_Eye
+    3300000: //RootNode
+    3300002: Maggot_Back
+    3300004: Maggot_Belly
+    3300006: Maggot_Left_Eye
+    3300008: Maggot_leg1
+    3300010: Maggot_Leg2
+    3300012: Maggot_leg3
+    3300014: Maggot_Leg4
+    3300016: Maggot_Leg5
+    3300018: Maggot_leg6
+    3300020: Maggot_Right_Eye
+    4300000: Maggot_Head
+    4300002: Maggot_Belly
+    4300004: Maggot_Back
+    4300006: Maggot_leg1
+    4300008: Maggot_Leg2
+    4300010: Maggot_leg3
+    4300012: Maggot_Leg4
+    4300014: Maggot_Leg5
+    4300016: Maggot_leg6
+    4300018: Maggot_Left_Eye
+    4300020: Maggot_Right_Eye
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
