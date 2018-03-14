@@ -17,10 +17,17 @@ public class Vivi : MonoBehaviour
     public float maxJuice;
     public bool[] recharge;
     public int recharge_size = 0;
+    private Rigidbody rb;
+    public float maxSpeed;
 
+    public bool startFlying = false;
+    private bool upA;
+    private bool downA;
+    private bool leftA;
+    private bool rightA;
 
     private float flybackTime = 1f;
-    private bool returned;
+    public bool returned;
 
     private void Start()
     {
@@ -29,13 +36,16 @@ public class Vivi : MonoBehaviour
         STOP = new Vector3(0, 0, 0);
         returned = true;
         Physics.IgnoreCollision(player.GetComponent<Collider>(), GetComponent<Collider>());
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         RETURN = lantern.transform.position + new Vector3(0,0.2f,0);
         // checks if shift key is pressed, to start controlling vivi
-        flying = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && juice > 0;
+        if (!startFlying) startFlying= (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && returned;
+        if (Input.GetKeyUp(KeyCode.LeftShift)) startFlying = false;
+        flying = startFlying && juice > 0;
  
         if (Input.GetKeyDown(KeyCode.O)){
             maxJuice += 25;
@@ -59,20 +69,41 @@ public class Vivi : MonoBehaviour
             CM.currentSpeed = STOP;
             flying = true;
             PM.enabled = false;
-            var x = Input.GetAxis("Horizontal") * Time.deltaTime * 4.5f;
-            var y = Input.GetAxis("Vertical") * Time.deltaTime * 4.5f;
+            var x = Input.GetAxis("Horizontal");
+            var y = Input.GetAxis("Vertical");
 
-            transform.Translate(x, y, 0);
+            if (x == 0)
+            {
+                if (rb.velocity.x > 0) rb.velocity = new Vector3(rb.velocity.x - Time.deltaTime * 5, rb.velocity.y, 0);
+                if (rb.velocity.x < 0) rb.velocity = new Vector3(rb.velocity.x + Time.deltaTime * 5, rb.velocity.y, 0);
+            }
+            if (y == 0)
+            {
+                if (rb.velocity.y > 0) rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y - Time.deltaTime * 5, 0);
+                if (rb.velocity.y < 0) rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y + Time.deltaTime * 5, 0);
+            }
+
+            if (x * rb.velocity.x < 0) rb.velocity = new Vector3(0,rb.velocity.y, 0);
+            if (y * rb.velocity.y < 0) rb.velocity = new Vector3(rb.velocity.x, 0, 0);
+            
+
+            rb.AddForce(x,y,0,ForceMode.Impulse);
+            if (rb.velocity.x > maxSpeed) rb.velocity = new Vector3(maxSpeed, rb.velocity.y, 0);
+            if (rb.velocity.x < -maxSpeed) rb.velocity = new Vector3(-maxSpeed, rb.velocity.y, 0);
+            if (rb.velocity.y > maxSpeed) rb.velocity = new Vector3(rb.velocity.x, maxSpeed, 0);
+            if (rb.velocity.y < -maxSpeed) rb.velocity = new Vector3(rb.velocity.x, -maxSpeed, 0);
+
             juice -= 1.0f/3.0f;
         }
         else if (returned == false) //if vivi os far away, make her comeback and waits for her to return before allowing player to mvoe again
         {
-
+            rb.velocity = new Vector3(0, 0, 0);
             flyback();
             StartCoroutine(flybackWait());
         }
         else if (returned == true) //vivi tracked to player after returning
         {
+            rb.velocity = new Vector3(0, 0, 0);
             PM.enabled = true;
             transform.position = RETURN;
             

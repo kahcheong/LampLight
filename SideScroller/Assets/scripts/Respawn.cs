@@ -21,7 +21,7 @@ public class Respawn : MonoBehaviour
         if (checker.juice <= 0.2f)
         {
             gameObject.transform.position = respawnZone.transform.position;
-            checker.juice = checker.maxJuice;
+            if (checker.returned) checker.juice = checker.maxJuice;
         }
 	}
 }
