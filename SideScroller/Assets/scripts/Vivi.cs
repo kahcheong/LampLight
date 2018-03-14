@@ -19,12 +19,15 @@ public class Vivi : MonoBehaviour
     public int recharge_size = 0;
     private Rigidbody rb;
     public float maxSpeed;
+    public float friction;
 
     public bool startFlying = false;
     private bool upA;
     private bool downA;
     private bool leftA;
     private bool rightA;
+    private float x;
+    private float y;
 
     private float flybackTime = 1f;
     public bool returned;
@@ -69,19 +72,9 @@ public class Vivi : MonoBehaviour
             CM.currentSpeed = STOP;
             flying = true;
             PM.enabled = false;
-            var x = Input.GetAxis("Horizontal");
-            var y = Input.GetAxis("Vertical");
+            x = Input.GetAxis("Horizontal");
+            y = Input.GetAxis("Vertical");
 
-            if (x == 0)
-            {
-                if (rb.velocity.x > 0) rb.velocity = new Vector3(rb.velocity.x - Time.deltaTime * 5, rb.velocity.y, 0);
-                if (rb.velocity.x < 0) rb.velocity = new Vector3(rb.velocity.x + Time.deltaTime * 5, rb.velocity.y, 0);
-            }
-            if (y == 0)
-            {
-                if (rb.velocity.y > 0) rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y - Time.deltaTime * 5, 0);
-                if (rb.velocity.y < 0) rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y + Time.deltaTime * 5, 0);
-            }
 
             if (x * rb.velocity.x < 0) rb.velocity = new Vector3(0,rb.velocity.y, 0);
             if (y * rb.velocity.y < 0) rb.velocity = new Vector3(rb.velocity.x, 0, 0);
@@ -115,6 +108,20 @@ public class Vivi : MonoBehaviour
             {
                 juice -= 1.0f;
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (x == 0)
+        {
+            if (rb.velocity.x > 0) rb.velocity = new Vector3(rb.velocity.x - Time.deltaTime * friction, rb.velocity.y, 0);
+            if (rb.velocity.x < 0) rb.velocity = new Vector3(rb.velocity.x + Time.deltaTime * friction, rb.velocity.y, 0);
+        }
+        if (y == 0)
+        {
+            if (rb.velocity.y > 0) rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y - Time.deltaTime * friction, 0);
+            if (rb.velocity.y < 0) rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y + Time.deltaTime * friction, 0);
         }
     }
 
