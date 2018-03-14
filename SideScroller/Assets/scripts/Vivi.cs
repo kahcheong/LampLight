@@ -7,6 +7,7 @@ public class Vivi : MonoBehaviour
 
     public GameObject player;
     public float juice = 100f;
+    public GameObject lantern;
 
     private PlayerMove PM;
     private CharacterMotor CM;
@@ -25,13 +26,14 @@ public class Vivi : MonoBehaviour
     {
         PM = player.GetComponent<PlayerMove>();
         CM = player.GetComponent<CharacterMotor>();
-        RETURN = new Vector3(-0.75f, 0.75f, -0.75f);
         STOP = new Vector3(0, 0, 0);
         returned = true;
+        Physics.IgnoreCollision(player.GetComponent<Collider>(), GetComponent<Collider>());
     }
 
     void Update()
-    {   
+    {
+        RETURN = lantern.transform.position + new Vector3(0,0.2f,0);
         // checks if shift key is pressed, to start controlling vivi
         flying = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && juice > 0;
  
@@ -72,7 +74,7 @@ public class Vivi : MonoBehaviour
         else if (returned == true) //vivi tracked to player after returning
         {
             PM.enabled = true;
-            transform.position = player.transform.position + RETURN;
+            transform.position = RETURN;
             
             if (juice < maxJuice &&  recharge.Contains(true))
             {
@@ -101,10 +103,10 @@ public class Vivi : MonoBehaviour
     void flyback()
     {
         
-        float distance = Vector3.Distance(gameObject.transform.position, player.transform.position + RETURN);
+        float distance = Vector3.Distance(gameObject.transform.position, RETURN);
         //Debug.Log(distance);
         flybackTime = Mathf.Pow(distance, 1f / 3f) / 1.5f;
-        iTween.MoveUpdate(gameObject, player.transform.position + RETURN, flybackTime);
+        iTween.MoveUpdate(gameObject,RETURN, flybackTime);
     }
 
 }
