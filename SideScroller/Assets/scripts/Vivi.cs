@@ -47,7 +47,7 @@ public class Vivi : MonoBehaviour
         RETURN = lantern.transform.position + new Vector3(0,0.2f,0);
         // checks if shift key is pressed, to start controlling vivi
         if (!startFlying) startFlying= (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && returned;
-        if (Input.GetKeyUp(KeyCode.LeftShift)) startFlying = false;
+        if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift)) startFlying = false;
         flying = startFlying && juice > 0;
  
         if (Input.GetKeyDown(KeyCode.O)){
