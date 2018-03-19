@@ -76,8 +76,8 @@ public class Vivi : MonoBehaviour
             y = Input.GetAxis("Vertical");
 
 
-            if (x * rb.velocity.x < 0) rb.velocity = new Vector3(0,rb.velocity.y, 0);
-            if (y * rb.velocity.y < 0) rb.velocity = new Vector3(rb.velocity.x, 0, 0);
+            //if (x * rb.velocity.x < 0) rb.velocity = new Vector3(0,rb.velocity.y, 0);
+            //if (y * rb.velocity.y < 0) rb.velocity = new Vector3(rb.velocity.x, 0, 0);
             
 
             rb.AddForce(x,y,0,ForceMode.Impulse);
