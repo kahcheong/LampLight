@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RespawnZone : MonoBehaviour {
-
-    public GameObject player;
-    public GameObject vivi;
-    public Vivi vivivi;
-    public float dist;
-    public GameObject juiceSource;
-    private int my_ID;
-    private bool succ;
-    public GameObject lightCone;
+    
+    public GameObject player;          //Thwe player object
+    public GameObject vivi;            //Vivi's gameobject
+    public Vivi vivivi;                //Vivi fior juice checking
+    public float dist;                 //Distance from here to player
+    public GameObject juiceSource;     //Vivi for juice checking
+    private int my_ID;                 //
+    private bool succ;                 //
+    public GameObject lightCone;       //
 
 	// Use this for initialization
 	void Start () {

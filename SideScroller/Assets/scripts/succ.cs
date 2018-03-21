@@ -6,11 +6,6 @@ public class succ : MonoBehaviour {
 
     public GameObject moth;
 
-	
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
 

@@ -5,24 +5,24 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour {
 
-    public bool AUsed = false;
-    public bool DUsed = false;
-    public bool SpaceUsed = false;
-    public bool ShiftUsed = false;
+    public bool AUsed = false;            //
+    public bool DUsed = false;            //
+    public bool SpaceUsed = false;        //
+    public bool ShiftUsed = false;        //
 
-    public Image AIcon;
-    public Image DIcon;
-    public Image SpaceIcon;
-    public Image ShiftIcon;
+    public Image AIcon;                   //
+    public Image DIcon;                   //
+    public Image SpaceIcon;               //
+    public Image ShiftIcon;               //
 
-    public GameObject package;
-    public GameObject Event1;
-    public GameObject Event2;
+    public GameObject package;            //
+    public GameObject Event1;             //
+    public GameObject Event2;             //
 
-    private Color AC;
-    private Color DC;
-    private Color SpaceC;
-    private Color ShiftC;
+    private Color AC;                     //
+    private Color DC;                     //
+    private Color SpaceC;                 //
+    private Color ShiftC;                 //
 
     // Use this for initialization
     void Start () {

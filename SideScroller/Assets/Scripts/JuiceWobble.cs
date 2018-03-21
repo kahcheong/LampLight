@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class JuiceWobble : MonoBehaviour {
+public class JuiceWobble : MonoBehaviour 
+{
 
-    public Sprite[] juices;
-    public int counter = 0;
+    public Sprite[] juices;    //How many jars of juice you can have
+    public int counter = 0;    
     public GameObject self;
     bool wait = false;
 

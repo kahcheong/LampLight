@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class ActivatePlatform : MonoBehaviour
 {
-    public GameObject spotLight;
-    public GameObject LightCone;                                          
-    public GameObject[] obstacle;
-    public GameObject colliderCone;
+    public GameObject spotLight;                                        
+    public GameObject LightCone;                                        
+    public GameObject[] obstacle;                                       
+    public GameObject colliderCone;                                     
 
     public float expandSpeed;                                           //rate in which the light cone extends at  
     public GameObject particles1;                                       //1st particle 
@@ -48,17 +48,17 @@ public class ActivatePlatform : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Vivi")
+        if (other.tag == "Vivi" || other.tag == "MagnifyingGlass")    //Checks whether it is Vivi or a magnifying glass ray interacting with the crystal
         {
-            Debug.Log("Vivi activated me");
+            Debug.Log("Vivi activated me");    //Dev check
             on = true;
             colliderCone.active = true;
             LightCone.active = true;
             try
             {
-                ActivatePullableObstacles();
+                ActivatePullableObstacles();   
             }
-            catch (Exception e)
+            catch (Exception e)    //If we have an error, just DO NOT
             {}
         }
     }
