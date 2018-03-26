@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3f829c201ae948a4dbdd170d92836a04
-timeCreated: 1519520435
+guid: 9c1986b6a4cab5a498338515f60f461b
+timeCreated: 1518366572
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -8,33 +8,28 @@ ModelImporter:
     100000: Back_Small_PinkCrystal001
     100002: Front_Small_PinkCrystal001
     100004: //RootNode
-    100006: LampLight_Crystal_Base004
-    100008: Left_PinkCrystal001
-    100010: Right_PinkCrystal001
+    100006: Left_PinkCrystal001
+    100008: Right_PinkCrystal001
     400000: Back_Small_PinkCrystal001
     400002: Front_Small_PinkCrystal001
     400004: //RootNode
-    400006: LampLight_Crystal_Base004
-    400008: Left_PinkCrystal001
-    400010: Right_PinkCrystal001
+    400006: Left_PinkCrystal001
+    400008: Right_PinkCrystal001
     2300000: Back_Small_PinkCrystal001
     2300002: Front_Small_PinkCrystal001
     2300004: //RootNode
-    2300006: LampLight_Crystal_Base004
-    2300008: Left_PinkCrystal001
-    2300010: Right_PinkCrystal001
+    2300006: Left_PinkCrystal001
+    2300008: Right_PinkCrystal001
     3300000: Back_Small_PinkCrystal001
     3300002: Front_Small_PinkCrystal001
     3300004: //RootNode
-    3300006: LampLight_Crystal_Base004
-    3300008: Left_PinkCrystal001
-    3300010: Right_PinkCrystal001
-    4300000: LampLight_PinkCracked
+    3300006: Left_PinkCrystal001
+    3300008: Right_PinkCrystal001
+    4300000: Middle_LargePinkCrystal001
     4300002: Front_Small_PinkCrystal001
     4300004: Back_Small_PinkCrystal001
     4300006: Left_PinkCrystal001
     4300008: Right_PinkCrystal001
-    4300010: LampLight_Crystal_Base004
     9500000: //RootNode
   materials:
     importMaterials: 1

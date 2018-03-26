@@ -9,7 +9,6 @@ public class ActivateCrackedPink : MonoBehaviour
     public GameObject LightCone;                                          
     public GameObject[] obstacle;
     public GameObject colliderCone;
-    public bool hasBeenUsed = false;
     public float expandSpeed;                                           //rate in which the light cone extends at  
     public GameObject particles1;                                       //1st particle 
     public GameObject particles2;                                       //2nd particle 
@@ -52,15 +51,14 @@ public class ActivateCrackedPink : MonoBehaviour
         LightCone.active = true;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) //Checking when a collider volvume intersects with the trigger zone
     {
-        if (other.tag == "Vivi" && !hasBeenUsed)
+        if (other.tag == "Vivi")
         {
             Debug.Log("Vivi activated me");
             on = true;
             colliderCone.active = true;
             LightCone.active = true;
-            hasBeenUsed = true;
         }
     }
 
@@ -92,7 +90,7 @@ public class ActivateCrackedPink : MonoBehaviour
                 p1.emissionRate = 0;                                            
                 p2.emissionRate = 0;
                 p3.emissionRate = 0;
-
+                LightCone.transform.localPosition += new Vector3(0, 11, 0);
                 light.range = 4;      
             }
         }
@@ -101,7 +99,10 @@ public class ActivateCrackedPink : MonoBehaviour
             if (!fade)                                                  //tries to match the idle pulsation for the base of the crystal
             {
                 light.range += Time.deltaTime * 3f;
-                if (light.range > 10) fade = true;
+                if (light.range > 10)
+                {
+                    fade = true;
+                }
             }
             else
             {
