@@ -11,6 +11,7 @@ public class MoveToPoints : MonoBehaviour
 	public float delay;										//how long to wait at each waypoint
 	public type movementType;								//stop at final waypoint, loop through waypoints or move back n forth along waypoints
     
+    
 	
 	public enum type { PlayOnce, Loop, PingPong }
 	private int currentWp;
@@ -25,12 +26,15 @@ public class MoveToPoints : MonoBehaviour
     public bool isPlatform;
     private GameObject player;
     public bool istouching;
+    public bool isBugBoy;
     public float leeway = 3f;
-
+    public GameObject myself;
+    private float directiion;
 
     //setup
     void OnEnable()
 	{
+        myself = gameObject;
         //if (bp.start)
         {
             player = GameObject.Find("Player");
@@ -82,7 +86,8 @@ public class MoveToPoints : MonoBehaviour
 			{
 				if(Time.time > arrivalTime + delay)
 				{
-					GetNextWP();
+                    if (isBugBoy) StartCoroutine(rotato());
+                    GetNextWP();
 					arrived = false;
 				}
 			}
@@ -103,6 +108,18 @@ public class MoveToPoints : MonoBehaviour
 					enemyAI.animatorController.SetBool("Moving", false);
 		}
 	}
+    IEnumerator rotato()
+    {
+        float temp = 0;
+        while (temp < 90)
+        {
+            gameObject.transform.Rotate(0, 0, Time.deltaTime*100);
+            temp += Time.deltaTime*100;
+            yield return false;
+        }
+
+        
+    }
 	
 	//if this is a platform move platforms toward waypoint
 	void FixedUpdate()

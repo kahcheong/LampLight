@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class MagniGlass : MonoBehaviour {
 
-    public GameObject player;
-    public GameObject vivi;
-    public GameObject Light;
+    public GameObject player;               //player object
+    public GameObject vivi;                 //vivi object
+    public GameObject Light;                //magnifyingGlass light
 
-    private bool activated = false;
-    public bool haveLight = false;
-    private int lightType;
+    private bool activated = false;         //if light is currently active
+    public bool haveLight = false;          //if player has picked up the magnifying glass yet
+    private int lightType;                  //
     private GameObject theLight;
+    private Vector3 posAdd;
 
     public Vector3 mouse_pos;
     public Transform target;
@@ -20,6 +21,7 @@ public class MagniGlass : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        posAdd = new Vector3(0, 0.2f, 0);
         player = GameObject.Find("Player");
         vivi = GameObject.Find("vivi 1");
         target = gameObject.transform;
@@ -27,6 +29,7 @@ public class MagniGlass : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        gameObject.transform.position = player.transform.position + posAdd;
         mouse_pos = Input.mousePosition;
         mouse_pos.z = 100;
         object_pos = Camera.main.WorldToScreenPoint(target.position);

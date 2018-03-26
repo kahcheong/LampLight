@@ -22,7 +22,7 @@ public class SelfDestruct : MonoBehaviour {
                 GO[i].GetComponent<Renderer>().material.SetFloat("_BurnSize", j);     
             }                                                                                 
             yield return null;           //Wait for the next killed enemy
-            Debug.Log(j);     //Dev check
+            //Debug.Log(j);     //Dev check
         }                                                                                    
         Destroy(gameObject);        //Destroy this gameObject
     }                                                                                         

@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class DestructoRay : MonoBehaviour {
 
-
-
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("light on" + other.name);
         if (other.tag == "Enemy")    //Checks if TheoryAttribute other entity is animation enemy
         {
             other.GetComponent<SelfDestruct>().kill = true;    //Sets the kill tag to true
