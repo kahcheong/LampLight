@@ -91,6 +91,13 @@ public class ActivateCrackedPink : MonoBehaviour
                 p2.emissionRate = 0;
                 p3.emissionRate = 0;
                 LightCone.transform.localPosition += new Vector3(0, 11, 0);
+                for (int i = 0; i < obstacle.Length; i++)
+                {
+                    if (obstacle[i] != null)
+                    {
+                        obstacle[i].GetComponent<BoxCollider>().enabled = false;
+                    }
+                }
                 light.range = 4;      
             }
         }
