@@ -57,6 +57,13 @@ public class ActivateCrackedPink : MonoBehaviour
         {
             Debug.Log("Vivi activated me");
             on = true;
+            for (int i = 0; i < obstacle.Length; i++)
+            {
+                if (obstacle[i] != null)
+                {
+                    obstacle[i].GetComponent<BoxCollider>().enabled = true;
+                }
+            }
             colliderCone.active = true;
             LightCone.active = true;
         }
