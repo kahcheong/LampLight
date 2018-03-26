@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public class ActivateCrackedPink : MonoBehaviour
     public GameObject LightCone;                                          
     public GameObject[] obstacle;
     public GameObject colliderCone;
-
+    public bool hasBeenUsed = false;
     public float expandSpeed;                                           //rate in which the light cone extends at  
     public GameObject particles1;                                       //1st particle 
     public GameObject particles2;                                       //2nd particle 
@@ -44,7 +45,7 @@ public class ActivateCrackedPink : MonoBehaviour
         {
             if (obstacle[i] != null)
             {
-               // obstacle[i].GetComponent<BoxCollider>().enabled = false;
+               obstacle[i].GetComponent<BoxCollider>().enabled = false;
             }
         }
         colliderCone.active = false;
@@ -53,12 +54,13 @@ public class ActivateCrackedPink : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Vivi" || other.tag == "MagniGlass")
+        if (other.tag == "Vivi" && !hasBeenUsed)
         {
-            Debug.Log(other.tag + " activated me");    //Dev check
+            Debug.Log("Vivi activated me");
             on = true;
             colliderCone.active = true;
             LightCone.active = true;
+            hasBeenUsed = true;
         }
     }
 
@@ -74,6 +76,7 @@ public class ActivateCrackedPink : MonoBehaviour
             if (light.range < 30)                                       //progressively extends the cone of light after crystal is activated
             {
                 light.range += Time.deltaTime * expandSpeed;
+                LightCone.transform.localPosition -= new Vector3(0, Time.deltaTime * expandSpeed /2 ,0);   //attempts to move the hider shader at the same pace as the light
             }
             if (p1.emissionRate < 40 && light.range>15)                 //progressively grows the particle systems when crystal is activated 
             {                                                           //and the light cone has extended to a certain amount
@@ -91,18 +94,6 @@ public class ActivateCrackedPink : MonoBehaviour
                 p3.emissionRate = 0;
 
                 light.range = 4;      
-            }
-            
-        }
-        if(activeTime == 0)
-        {
-            for (int i = 0; i < obstacle.Length; i++)
-            {
-                if (obstacle[i] != null)
-                {
-                    obstacle[i].GetComponentInChildren<PullPlatform>().returning = true;
-                    obstacle[i].GetComponentInParent<PullPlatform>().enabled = true;
-                }
             }
         }
         else
