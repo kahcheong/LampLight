@@ -5,48 +5,49 @@ using UnityEngine;
 
 public class Talk : MonoBehaviour {
 
-    public bool talking;
-    public GameObject player;
-    public GameObject used;
-    public GameObject zone;
-    public string[] curr;
-    public int progress;
+    public bool talking;            //whether text event is currently happening
+    public GameObject player;       //player object
+    public GameObject used;         //previous text zone
+    public GameObject zone;         //text box
+    public string[] curr;           //message array to be displayed 
+    public int progress;            //progression through message array
 
-    public Canvas _canvas;
-    public Text _text;
+    public Canvas _canvas;          //canvas text is displayed on
+    public Text _text;              //text area message is written on
 
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.Find("Player");
-        _text.text = "";
+        player = GameObject.Find("Player");     //finding player object
+        _text.text = "";                        //clearing text zrea
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (talking)
+        if (talking)                //if currently in text event                                             
         {
-            zone.SetActive(true);
-            player.GetComponent<PlayerMove>().enabled = false;
+            zone.SetActive(true);                                   //reveal text box
+            player.GetComponent<PlayerMove>().enabled = false;      //stop player controller
         }
-        else
+        else                        //if not currently in text event
         {
-            zone.SetActive(false);
-            player.GetComponent<PlayerMove>().enabled = true;
+            zone.SetActive(false);                                  //hide text box
+            player.GetComponent<PlayerMove>().enabled = true;       //reactivate player controller
         }
 
-        if (Input.GetKeyDown(KeyCode.Return) )
+        if (Input.GetKeyDown(KeyCode.Return) )                      //check for player input for text event progression
         {
-            if (curr == null || progress == curr.Length-1)
-            {
-                _text.text = "";
-                talking = false;
-                if (used != null) Destroy(used);
+            if (curr == null || progress == curr.Length-1)          //check if text event is only 1 message long
+            {                                                       //or if it is on the last message 
+
+                _text.text = "";                                    //clears the text area
+                talking = false;                                    //ends text event
+                if (used != null) Destroy(used);                    //destroy used text event trigger
             }
-            else
+            else                                                    //if there are more messages
             {
-                progress++;
-                _text.text = curr[progress];
+                progress++;                                         //increment the message tracker
+                _text.text = curr[progress];                        //sends the next message
             }
             
         }
@@ -54,14 +55,11 @@ public class Talk : MonoBehaviour {
 
     public void talk(string[] message, GameObject g)
     {
-        talking = true;
-        used = g;
-        int temp = 0;
-        if (message.Length > 1) curr = message;
-        else curr = null;
-        progress = 0;
-
-
-        _text.text = message[0];
+        talking = true;                                             //starts text event
+        used = g;                                                   //save the triggered text event trigger
+        if (message.Length > 1) curr = message;                     //if message is longer than one message, store the array
+        else curr = null;                                           //else keep the storage empty
+        progress = 0;                                               //set the tracker to 0
+        _text.text = message[0];                                    //set the text area to the first message
     }
 }
