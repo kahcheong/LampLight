@@ -9,6 +9,7 @@ public class MagniGlass : MonoBehaviour {
     public GameObject Light;
 
     private bool activated = false;
+    public bool haveLight = false;
     private int lightType;
     private GameObject theLight;
 
@@ -34,7 +35,7 @@ public class MagniGlass : MonoBehaviour {
         angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler( new Vector3(0, 0, angle));
 
-        if (Input.GetKeyDown(KeyCode.F)) activated = !activated;
+        if (Input.GetKeyDown(KeyCode.F) && haveLight) activated = !activated;
 
         Light.SetActive(activated);
   

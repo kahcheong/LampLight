@@ -31,7 +31,7 @@ public class Vivi : MonoBehaviour
     private float y;                     //Vivi's current Y
 
     private float flybackTime = 1f;      //Time it takes Vivi to fly back to Lantern
-    public bool returned;                //Whether o rnot Vivi is back at lantern
+    public bool returned;                //Whether or not Vivi is back at lantern
 
     private void Start()
     {
@@ -89,7 +89,7 @@ public class Vivi : MonoBehaviour
 
             juice -= 1.0f/3.0f; //Detract juice while Vivi flies
         }
-        else if (returned == false) //if vivi os far away, make her comeback and waits for her to return before allowing player to mvoe again
+        else if (returned == false) //if vivi is far away, make her comeback and waits for her to return before allowing player to mvoe again
         {
             rb.velocity = new Vector3(0, 0, 0);
             flyback();

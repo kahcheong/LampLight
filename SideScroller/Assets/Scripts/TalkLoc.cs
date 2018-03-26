@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TalkLoc : MonoBehaviour {
 
-    public string message;
+    public string[] message;
     
     public GameObject player;
     public Talk talker;
