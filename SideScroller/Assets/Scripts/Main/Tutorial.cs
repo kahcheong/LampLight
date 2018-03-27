@@ -5,24 +5,29 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour {
 
-    public bool AUsed = false;            //
-    public bool DUsed = false;            //
-    public bool SpaceUsed = false;        //
-    public bool ShiftUsed = false;        //
+    public bool AUsed = false;            
+    public bool DUsed = false;
+    public bool FUsed = false;
+    public bool SpaceUsed = false;        
+    public bool ShiftUsed = false;       
+           
 
-    public Image AIcon;                   //
-    public Image DIcon;                   //
-    public Image SpaceIcon;               //
-    public Image ShiftIcon;               //
+    public Image AIcon;           
+    public Image DIcon;
+    public Image FIcon;
+    public Image SpaceIcon;          
+    public Image ShiftIcon;             
 
-    public GameObject package;            //
-    public GameObject Event1;             //
-    public GameObject Event2;             //
+    public GameObject package;          
+    public GameObject Event1;          
+    public GameObject Event2;
+    public GameObject Event3;
 
-    private Color AC;                     //
-    private Color DC;                     //
-    private Color SpaceC;                 //
-    private Color ShiftC;                 //
+    private Color AC;                   
+    private Color DC;
+    private Color FC;
+    private Color SpaceC;             
+    private Color ShiftC;        
 
     // Use this for initialization
     void Start () {
@@ -35,6 +40,10 @@ public class Tutorial : MonoBehaviour {
         DC = DIcon.color;
         DC.a = 1f;
         DIcon.color = DC;
+
+        FC = FIcon.color;
+        FC.a = 0f;
+        FIcon.color = FC;
 
 
         SpaceC = SpaceIcon.color;
@@ -54,14 +63,19 @@ public class Tutorial : MonoBehaviour {
 
         if (!AUsed && Input.GetKeyDown(KeyCode.A))
         {
-            AUsed = true;
             StartCoroutine(Fader(AIcon));
-            
+            AUsed = true;
+
         }
         if (!DUsed && Input.GetKeyDown(KeyCode.D))
         {
             StartCoroutine(Fader(DIcon));
             DUsed = true;
+        }
+        if (!FUsed && Input.GetKeyDown(KeyCode.F))
+        {
+            StartCoroutine(Fader(FIcon));
+            FUsed = true;
         }
         if (!SpaceUsed && Input.GetKeyDown(KeyCode.Space))
         {
@@ -87,17 +101,27 @@ public class Tutorial : MonoBehaviour {
             SpaceC.a = 1f;
             SpaceIcon.color = SpaceC;
 
-            Destroy(other);
+            Destroy(other.gameObject);
         }
-        if (other == Event2)
+        if (other.gameObject == Event2)
         {
             ShiftUsed = false;
 
             ShiftC = ShiftIcon.color;
-            ShiftC.a = 0f;
+            ShiftC.a = 1f;
             ShiftIcon.color = ShiftC;
 
-            Destroy(other);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject == Event3)
+        {
+            FUsed = false;
+
+            FC = FIcon.color;
+            FC.a = 1f;
+            FIcon.color = FC;
+
+            Destroy(other.gameObject);
         }
     }
 
