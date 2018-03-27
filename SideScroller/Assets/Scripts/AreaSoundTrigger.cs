@@ -19,13 +19,23 @@ public class AreaSoundTrigger : MonoBehaviour
     
     [Tooltip("Default music")]
     public AudioClip defMusic;
-        
+
+    [Tooltip("Whether or not this is a single use trigger")]
+    public bool isSingleTrigger = false;
+
+    [Tooltip("Whether or not this has been triggered")]
+    public bool beenTriggered = false;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !beenTriggered)
         {
             mainAudioSource.clip = toPlay;    //Switch to the target audio
             mainAudioSource.Play();            //Play the target audio
+            if (isSingleTrigger)
+            {
+                beenTriggered = true;
+            }
         }
     }
 }
