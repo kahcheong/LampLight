@@ -7,7 +7,13 @@ using UnityEngine.SceneManagement;
 public class skip : MonoBehaviour
 {
 
+    private float waitTime;
 
+    private void Start()
+    {
+        waitTime = 84f;
+        StartCoroutine(wati());
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,4 +23,14 @@ public class skip : MonoBehaviour
 
         if (Input.GetKey("escape")) SceneManager.LoadScene("Main", LoadSceneMode.Single);
     }
+
+
+    IEnumerator wati()
+    {
+        print(Time.time);
+        yield return new WaitForSeconds(waitTime);
+        print(Time.time);
+        SceneManager.LoadScene("Main", LoadSceneMode.Single);
+    }
+
 }
