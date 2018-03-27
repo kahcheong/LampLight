@@ -16,6 +16,7 @@ public class BugPath : MonoBehaviour
     private float width;
     private float height;
     private BoxCollider bc;
+    public Vivi vivi;
 
     private void Start()
     {
@@ -46,6 +47,11 @@ public class BugPath : MonoBehaviour
         }
         gameObject.GetComponent<MoveToPoints>().enabled = true;
 
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        
     }
 
 }
