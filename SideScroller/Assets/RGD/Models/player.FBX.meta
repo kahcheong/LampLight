@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: 17a1915a10ab6f748b5d2054101b88b4
+timeCreated: 1521757577
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: base
+    100002: LArm1
+    100004: LArm2
+    100006: LArmCollarbone
+    100008: LArmDigit01
+    100010: LArmDigit02
+    100012: LArmDigit03
+    100014: LArmDigit21
+    100016: LArmDigit22
+    100018: LArmDigit23
+    100020: LArmPalm
+    100022: LLeg1
+    100024: LLeg2
+    100026: LLegDigit01
+    100028: LLegPalm
+    100030: LLegPlatform
+    100032: Pelvis
+    100034: //RootNode
+    100036: RArm1
+    100038: RArm2
+    100040: RArmCollarbone
+    100042: RArmDigit01
+    100044: RArmDigit02
+    100046: RArmDigit03
+    100048: RArmDigit11
+    100050: RArmDigit12
+    100052: RArmDigit13
+    100054: RArmDigit21
+    100056: RArmDigit22
+    100058: RArmDigit23
+    100060: RArmPalm
+    100062: Ribcage
+    100064: RLeg1
+    100066: RLeg2
+    100068: RLegPalm
+    100070: RLegPlatform
+    100072: SheKLArmDigit11
+    100074: SheKLArmDigit12
+    100076: SheKLArmDigit13
+    100078: SheKRLegDigit01
+    100080: SphereMan
+    100082: Spine
+    400000: base
+    400002: LArm1
+    400004: LArm2
+    400006: LArmCollarbone
+    400008: LArmDigit01
+    400010: LArmDigit02
+    400012: LArmDigit03
+    400014: LArmDigit21
+    400016: LArmDigit22
+    400018: LArmDigit23
+    400020: LArmPalm
+    400022: LLeg1
+    400024: LLeg2
+    400026: LLegDigit01
+    400028: LLegPalm
+    400030: LLegPlatform
+    400032: Pelvis
+    400034: //RootNode
+    400036: RArm1
+    400038: RArm2
+    400040: RArmCollarbone
+    400042: RArmDigit01
+    400044: RArmDigit02
+    400046: RArmDigit03
+    400048: RArmDigit11
+    400050: RArmDigit12
+    400052: RArmDigit13
+    400054: RArmDigit21
+    400056: RArmDigit22
+    400058: RArmDigit23
+    400060: RArmPalm
+    400062: Ribcage
+    400064: RLeg1
+    400066: RLeg2
+    400068: RLegPalm
+    400070: RLegPlatform
+    400072: SheKLArmDigit11
+    400074: SheKLArmDigit12
+    400076: SheKLArmDigit13
+    400078: SheKRLegDigit01
+    400080: SphereMan
+    400082: Spine
+    4300000: SphereMan
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SphereMan
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
