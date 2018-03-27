@@ -55,7 +55,7 @@ public class ActivateCrackedPink : MonoBehaviour
     {
         if (other.tag == "Vivi")
         {
-            Debug.Log("Vivi activated me");
+            //Debug.Log("Vivi activated me");
             on = true;
             for (int i = 0; i < obstacle.Length; i++)
             {

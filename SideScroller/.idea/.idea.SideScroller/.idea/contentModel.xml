@@ -240,6 +240,8 @@
           <e p="ActivateCrackedPink.cs" t="Include" />
           <e p="ActivatePlatform.cs" t="Include" />
           <e p="ActivateTempCrackedPlatform.cs" t="Include" />
+          <e p="AreaSoundTrigger.cs" t="Include" />
+          <e p="BlueGlassPickup.cs" t="Include" />
           <e p="BugPath.cs" t="Include" />
           <e p="characterCameraFollow.cs" t="Include" />
           <e p="DestructoRay.cs" t="Include" />
@@ -247,6 +249,7 @@
           <e p="displayUI.cs" t="Include" />
           <e p="getMagniGlass.cs" t="Include" />
           <e p="GlowFruitPickup.cs" t="Include" />
+          <e p="GreenGlassPickup.cs" t="Include" />
           <e p="Hover.cs" t="Include" />
           <e p="juiceLevel.cs" t="Include" />
           <e p="JuiceWobble.cs" t="Include" />

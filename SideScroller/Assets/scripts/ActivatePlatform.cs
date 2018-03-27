@@ -50,7 +50,7 @@ public class ActivatePlatform : MonoBehaviour
     {
         if (other.tag == "Vivi" || other.tag == "MagnifyingGlass")    //Checks whether it is Vivi or a magnifying glass ray interacting with the crystal
         {
-            Debug.Log("Vivi activated me");    //Dev check
+            //Debug.Log("Vivi activated me");    //Dev check
             on = true;
             colliderCone.active = true;
             LightCone.active = true;

@@ -7,7 +7,7 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
     public GameObject[] obstacles;    //The list of obstacles assigned to this crystal
     public void OnEnable()
     {
-        Debug.Log("We inside the cone");    //Dev check
+        //Debug.Log("We inside the cone");    //Dev check
         for (int i = 0; i < obstacles.Length; i++)
         {
             obstacles[i].GetComponent<BoxCollider>().enabled = true;
@@ -18,7 +18,7 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("Enter the cone");    //Dev check
+            //Debug.Log("Enter the cone");    //Dev check
             other.GetComponent<BoxCollider>().enabled = true;    //Turns on the obstacles collider
         }
     }
@@ -27,7 +27,7 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("Stay in the cone" + other.gameObject.name);    //Dev check
+            //Debug.Log("Stay in the cone" + other.gameObject.name);    //Dev check
             other.GetComponent<BoxCollider>().enabled = true;    //Turns on the obstacles collider
         }
     }
@@ -36,7 +36,7 @@ public class PlatformPhysicalityTrigger : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("Leave the cone");    //Dev check
+            //Debug.Log("Leave the cone");    //Dev check
             other.GetComponent<BoxCollider>().enabled = false;    //Turns ooff the obstacles collider
         }
     }

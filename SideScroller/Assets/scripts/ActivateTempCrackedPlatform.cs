@@ -56,7 +56,7 @@ public class ActivateTempCrackedPlatform : MonoBehaviour
     {
         if (other.tag == "Vivi")
         {
-            Debug.Log("Vivi activated me");
+            //Debug.Log("Vivi activated me");
             on = true;
             colliderCone.active = true;
             LightCone.active = true;

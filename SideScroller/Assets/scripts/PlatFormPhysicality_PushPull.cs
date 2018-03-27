@@ -7,7 +7,7 @@ public class PlatFormPhysicality_PushPull : MonoBehaviour
     public GameObject[] obstacles;
     public void OnEnable()
     {
-        Debug.Log("We inside the cone");
+        //Debug.Log("We inside the cone");
         for (int i = 0; i < obstacles.Length; i++)
         {
         }
@@ -17,7 +17,7 @@ public class PlatFormPhysicality_PushPull : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("Enter the cone");
+            //Debug.Log("Enter the cone");
             other.GetComponentInChildren<PullPlatform>().activated = true;
         }
     }
@@ -26,7 +26,7 @@ public class PlatFormPhysicality_PushPull : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("Stay in the cone");
+            //Debug.Log("Stay in the cone");
             other.GetComponentInChildren<PullPlatform>().activated = true;
         }
     }
@@ -35,7 +35,7 @@ public class PlatFormPhysicality_PushPull : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Debug.Log("Leave the cone");
+            //Debug.Log("Leave the cone");
             other.GetComponentInChildren<PullPlatform>().activated = false;
         }
     }
